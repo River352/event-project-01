@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login & Signup</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .container {
+      background: rgb(158, 175, 180);
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 300px;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      box-sizing: border-box;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    .toggle {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .toggle a {
+      color: #007bff;
+      cursor: pointer;
+    }
+
+    .form {
+      display: none;
+    }
+
+    .form.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div id="loginForm" class="form active">
+      <h2>Login</h2>
+      <input type="text" id="loginUser" placeholder="Username" required />
+      <input type="password" id="loginPass" placeholder="Password" required />
+      <button onclick="login()">Login</button>
+      <div class="toggle">Don't have an account? <a onclick="toggleForms()">Sign up</a></div>
+    </div>
+
+    <div id="signupForm" class="form">
+      <h2>Sign Up</h2>
+      <input type="text" id="signupUser" placeholder="Username" required />
+      <input type="password" id="signupPass" placeholder="Password" required />
+      <button onclick="signup()">Sign Up</button>
+      <div class="toggle">Already have an account? <a onclick="toggleForms()">Login</a></div>
+    </div>
+  </div>
+
+  <script>
+    function toggleForms() {
+      document.getElementById("loginForm").classList.toggle("active");
+      document.getElementById("signupForm").classList.toggle("active");
+    }
+
+    function login() {
+      const user = document.getElementById("loginUser").value;
+      const pass = document.getElementById("loginPass").value;
+      alert(`Logged in as  $(user)`);
+    }
+
+    function signup() {
+      const user = document.getElementById("signupUser").value;
+      const pass = document.getElementById("signupPass").value;
+      alert(`Signed up as ${user}`);
+    }
+  </script>
+</body>
+</html>
