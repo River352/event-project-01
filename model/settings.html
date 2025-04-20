@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                font-family: 'Segoe UI', sans-serif;
+                background-color: #f4f4f4;
+                margin: 0;
+                padding: 0;
+            }
+        
+            .settings-container {
+                max-width: 900px;
+                margin: 40px auto;
+                background-color: #fff;
+                border-radius: 12px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+                padding: 40px;
+            }
+        
+            .settings-header {
+                border-bottom: 1px solid #e0e0e0;
+                padding-bottom: 20px;
+                margin-bottom: 30px;
+            }
+        
+            .settings-header h2 {
+                margin: 0;
+                font-size: 26px;
+                color: #333;
+            }
+        
+            .settings-section {
+                margin-bottom: 30px;
+            }
+        
+            .settings-section h3 {
+                color: #444;
+                margin-bottom: 10px;
+            }
+        
+            .settings-section label {
+                display: block;
+                margin: 8px 0 5px;
+                color: #555;
+            }
+        
+            .settings-section input[type="text"],
+            .settings-section input[type="email"],
+            .settings-section input[type="password"],
+            .settings-section select {
+                width: 100%;
+                padding: 10px;
+                font-size: 15px;
+                border: 1px solid #ccc;
+                border-radius: 6px;
+                margin-bottom: 15px;
+            }
+        
+            .save-btn {
+                background-color: #007bff;
+                color: white;
+                padding: 12px 24px;
+                border: none;
+                border-radius: 6px;
+                cursor: pointer;
+                font-size: 16px;
+            }
+        
+            .save-btn:hover {
+                background-color: #0056b3;
+            }
+        </style>
+    </head>
+        
+        <body>
+        <div class="settings-container">
+            <div class="settings-header">
+                <h2>Account Settings</h2>
+            </div>
+        
+            <form method="post" action="/User/SaveSettings">
+                <div class="settings-section">
+                    <h3>Profile Info</h3>
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" value="John Doe" />
+        
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" value="john@example.com" />
+                </div>
+        
+                <div class="settings-section">
+                    <h3>Password</h3>
+                    <label for="currentPassword">Current Password</label>
+                    <input type="password" id="currentPassword" name="currentPassword" />
+        
+                    <label for="newPassword">New Password</label>
+                    <input type="password" id="newPassword" name="newPassword" />
+        
+                    <label for="confirmPassword">Confirm New Password</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" />
+                </div>
+        
+                <div class="settings-section">
+                    <h3>Notification Preferences</h3>
+                    <label for="emailNotify">Email Notifications</label>
+                    <select id="emailNotify" name="emailNotify">
+                        <option value="all">All notifications</option>
+                        <option value="important">Only important</option>
+                        <option value="none">None</option>
+                    </select>
+                </div>
+        
+                <div class="settings-section">
+                    <h3>Theme</h3>
+                    <label for="theme">Select Theme</label>
+                    <select id="theme" name="theme">
+                        <option value="light">Light</option>
+                        <option value="dark">Dark</option>
+                    </select>
+                </div>
+        
+                <button type="submit" class="save-btn">Save Changes</button>
+            </form>
+        </div>
+    </body>
+</html>

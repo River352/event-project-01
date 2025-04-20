@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                font-family: 'Segoe UI', sans-serif;
+                background-color: #f4f4f4;
+                margin: 0;
+                padding: 0;
+            }
+        
+            .profile-container {
+                max-width: 800px;
+                margin: 40px auto;
+                padding: 30px;
+                background-color: white;
+                border-radius: 12px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            }
+        
+            .profile-header {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                border-bottom: 1px solid #ddd;
+                padding-bottom: 20px;
+                margin-bottom: 30px;
+            }
+        
+            .profile-header img {
+                width: 90px;
+                height: 90px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+        
+            .profile-header h2 {
+                margin: 0;
+                font-size: 26px;
+            }
+        
+            .profile-info {
+                display: grid;
+                grid-template-columns: 1fr 2fr;
+                row-gap: 20px;
+                column-gap: 20px;
+            }
+        
+            .profile-info label {
+                font-weight: bold;
+                color: #555;
+                text-align: right;
+            }
+        
+            .profile-info div {
+                color: #333;
+            }
+        
+            .edit-profile {
+                text-align: right;
+                margin-top: 30px;
+            }
+        
+            .edit-profile a {
+                background-color: #007bff;
+                color: white;
+                padding: 10px 20px;
+                border-radius: 6px;
+                text-decoration: none;
+                font-size: 14px;
+            }
+        
+            .edit-profile a:hover {
+                background-color: #0056b3;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="profile-container">
+            <div class="profile-header">
+                <img src="/images/default-profile.jpg" alt="User Profile" />
+                <div>
+                    <h2>Name</h2>
+                    <p style="color: #666;">name.@example.com</p>
+                </div>
+            </div>
+        
+            <div class="profile-info">
+                <label>Full Name:</label>
+                <div>Name</div>
+        
+                <label>Email:</label>
+                <div>Name.@example.com</div>
+        
+                <label>Phone:</label>
+                <div>8907656</div>
+        
+                <label>Location:</label>
+                <div>/////////</div>
+        
+                <label>Account Created:</label>
+                <div>march 19, 2025</div>
+        
+                <label>Status:</label>
+                <div>Verified</div>
+            </div>
+        
+            <div class="edit-profile">
+                <a href="/User/EditProfile">Edit Profile</a>
+            </div>
+        </div>
+    </body>
+</html>

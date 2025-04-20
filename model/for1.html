@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Events - EVENTO</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f9fafa;
+      color: #333;
+    }
+
+    header {
+      background-color: #007aff;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .icons i {
+      margin: 0 10px;
+      cursor: pointer;
+    }
+
+    .pos {
+      display: flex;
+    }
+
+    iframe {
+      width: 100%;
+      height: calc(100vh - 70px); /* Adjust height based on header */
+      border: none;
+    }
+
+    .chat-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #4cd964;
+      color: white;
+      padding: 12px 16px;
+      border-radius: 24px;
+      font-size: 14px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      cursor: pointer;
+      z-index: 1000;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+        EVENTO
+    </div>
+    <div class="icons">
+      <div class="pos"> 
+        <div><i class="fas fa-plus-circle" onclick="loadForm('dummy2.html')"></i></div>
+        <div><i class="fas fa-bell" onclick="loadForm('notifications01.html')"></i></div>
+        <div><i class="fas fa-question-circle" onclick="loadForm('customercare.html')"></i></div>
+        <div><i class="fas fa-cog" onclick="loadForm('settings.html')"></i></div>
+        <div><i class="fas fa-user-circle" onclick="loadForm('profile.html')"></i></div>
+      </div>
+    </div>
+  </header>
+
+  <iframe id="content-frame" src=""></iframe>
+
+  <div class="chat-button">Ask us!</div>
+
+  <script>
+    function loadForm(page) {
+      document.getElementById("content-frame").src = page;
+    }
+  </script>
+</body>
+</html>
