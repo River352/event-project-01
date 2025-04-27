@@ -1,0 +1,122 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Event Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 700px;
+      margin: 40px auto;
+      background: white;
+      padding: 20px 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+    h2 {
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin: 10px 0 5px;
+      font-weight: bold;
+    }
+    input, select, textarea, button {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+    input[type="file"] {
+      padding: 3px;
+    }
+    .time-picker {
+      display: flex;
+      gap: 10px;
+    }
+    .toggle {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Event title and description</h2><label for="event-name">Event name *</label>
+<input type="text" id="event-name" placeholder="Title of your event (example: Tech conference 2024)" required />
+
+<label for="event-type">Event type *</label>
+<select id="event-type" required>
+  <option value="">Select</option>
+  <option value="conference">Conference</option>
+  <option value="webinar">Webinar</option>
+  <option value="workshop">Workshop</option>
+</select>
+
+<label for="timezone">Time zone where the event happens</label>
+<select id="timezone">
+  <option value="GMT+0530">(GMT+0530) India Time</option>
+</select>
+
+<label for="start-date">Event starts *</label>
+<input type="date" id="start-date" required />
+<div class="time-picker">
+  <select>
+    <option>09:00</option>
+    <option>10:00</option>
+  </select>
+  <select>
+    <option>AM</option>
+    <option>PM</option>
+  </select>
+</div>
+
+<label for="end-date">Event ends *</label>
+<input type="date" id="end-date" required />
+<div class="time-picker">
+  <select>
+    <option>05:00</option>
+    <option>06:00</option>
+  </select>
+  <select>
+    <option>PM</option>
+    <option>AM</option>
+  </select>
+</div>
+
+<div>
+  <input type="checkbox" id="recurring" />
+  <label for="recurring">This event has a recurring schedule</label>
+</div>
+
+<label for="cover-image">Add a cover image for your event *</label>
+<input type="file" id="cover-image" accept="image/png, image/jpeg" required />
+
+<div class="toggle">
+  <input type="checkbox" id="reserved-seating" />
+  <label for="reserved-seating">Enable reserved seating for this event</label>
+</div>
+
+<label for="event-host">Event host *</label>
+<input type="text" id="event-host" value="Shade" required />
+
+<label for="organizer-desc">Organizer description</label>
+<textarea id="organizer-desc" rows="3"></textarea>
+
+<label for="event-desc">Event description *</label>
+<textarea id="event-desc" rows="6" required></textarea>
+
+<button type="submit">Create Event</button>
+
+  </div>
+</body>
+</html>
